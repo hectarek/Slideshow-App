@@ -9,9 +9,8 @@ var slideshow = {
         this.currentPhotoIndex++;
 
         if (this.currentPhotoIndex > this.photoList.length - 1 ) {
-            this.currentPhotoIndex = 0;
-            console.log('Back to beginning of slideshow')
-            console.log('Photo is:', this.photoList[this.currentPhotoIndex]);
+            this.currentPhotoIndex = -1;
+            console.log('End of Slideshow')
         } else {
             console.log('next slide');
             console.log('Photo is:', this.photoList[this.currentPhotoIndex]);
@@ -22,10 +21,8 @@ var slideshow = {
         this.currentPhotoIndex--;
 
         if (this.currentPhotoIndex < 0 ) {
-            this.currentPhotoIndex = this.photoList.length - 1 
-            console.log('Back to end of slideshow');
-            console.log('Photo is:', this.photoList[this.currentPhotoIndex]);
-
+            this.currentPhotoIndex = this.photoList.length
+            console.log('Beginning of Slideshow');
         } else {
             console.log('previous slide');
             console.log('Photo is:', this.photoList[this.currentPhotoIndex]);
@@ -33,16 +30,17 @@ var slideshow = {
         }
     },
     getCurrentPhoto: function() {
-        console.log(this.photoList[this.currentPhotoIndex]);
+        console.log('Current Photo is:', this.photoList[this.currentPhotoIndex]);
     }
 }
 
 slideshow.getCurrentPhoto();
-slideshow.nextPhoto();
-slideshow.getCurrentPhoto();
-slideshow.nextPhoto();
-slideshow.getCurrentPhoto();
 slideshow.prevPhoto();
+slideshow.prevPhoto();
+slideshow.nextPhoto();
+slideshow.nextPhoto();
+slideshow.nextPhoto();
+slideshow.nextPhoto();
 slideshow.getCurrentPhoto();
 
 
