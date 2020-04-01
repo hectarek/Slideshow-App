@@ -34,6 +34,8 @@ var slideshow = {
     }
 }
 
+// Async changes
+
 slideshow.getCurrentPhoto();
 slideshow.prevPhoto();
 slideshow.prevPhoto();
